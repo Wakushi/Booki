@@ -1,162 +1,131 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
 }
 
 .fa-solid {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
-body {
-    display: flex;
-    justify-content: center;
+/****** Typography ***********/
+
+h1 {
+  line-height: 26px;
+  margin-bottom: 0.5rem;
 }
 
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
+/****** Modifiers ***********/
+
+.flex,
+.flex--center,
+.flex--column,
+.flex--around,
+.flex--between {
+  display: flex;
 }
 
-.section-title {
-    margin: 0;
-    font-size: 22px;
+.flex--center {
+  justify-content: center;
+  align-items: center;
 }
 
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+.flex--column {
+  flex-direction: column;
 }
 
-.card img {
-    object-fit: cover;
+.flex--around {
+  justify-content: space-around;
 }
 
-.card-title {
-    font-size: 16px;
+.flex--between {
+  justify-content: space-between;
 }
 
-.euro {
+/****** Header ***********/
+
+header {
+  margin-bottom: 1.875rem;
+}
+
+.header__logo {
+  width: 60px;
+  margin: 1.875rem;
+}
+
+nav {
+  width: 100%;
+}
+
+nav > ul > li {
+  list-style: none;
+  width: 50%;
+  text-align: center;
+  border-bottom: 2px var(--main-bg-color) solid;
+  padding-bottom: 1rem;
+}
+
+nav > ul > li:hover,
+nav > ul > li:active,
+nav > ul > li:focus {
+  color: var(--main-color);
+  border-bottom: 2px var(--main-color) solid;
+}
+
+/****** Booking Search ***********/
+
+.booking-search {
+  padding: 0 1.25rem;
+}
+
+.booking-search > p {
+    margin-bottom: 2.1rem ;
+}
+
+
+.booking-search__search-bar {
+  border: 1px var(--main-bg-color) solid;
+  border-radius: 1rem;
+}
+
+.booking-search__search-bar > input {
+  border: transparent;
+  font-size: 1.125rem ;
+}
+
+.booking-search__search-bar > input::placeholder {
+    color: black;
     font-weight: 700;
 }
 
-.neutralStar {
-    color: var(--main-bg-color)
+.booking-search__search-bar .fa-location-dot,
+.booking-search__search-bar .fa-magnifying-glass {
+    padding: 1rem;
 }
 
-/****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
-    display: flex;
-    justify-content: space-between;
+.booking-search__search-bar .fa-location-dot {
+  color: black;
+  background-color: var(--main-bg-color);
+  border-radius: 1rem 0 0 1rem;
 }
 
-.hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-/****** Hebergements ***********/
-.hebergements {
-    width: 65%;
-}
-
-/****** Populaires ***********/
-.populaires {
-    width: 32%;
-}
-
-.populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.populaires-cards .card {
-    display: flex;
-    margin-top: 33px;
-}
-
-.populaires-cards img {
-    width: 33%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.populaires-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-.populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-}
-
-.populaires-cards .card-subtitle {
-    margin: 0;
-}
-
-.populaires-cards .card-rating {
-    margin-bottom: 5px;
-}
-
-
-
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    .hebergements-and-populaires {
-        flex-direction: column;
-    }
-
-    .hebergements {
-        width: 100%;
-    }
-
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .populaires-cards .card {
-        width: 30%;
-    }
-
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
-}
-
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
+.booking-search__search-bar .fa-magnifying-glass {
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 1rem;
 }
