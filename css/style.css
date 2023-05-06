@@ -1,4 +1,4 @@
-/****** General ***********/
+/****** GENERAL ***********/
 * {
   font-family: "Raleway", sans-serif;
   margin: 0;
@@ -28,11 +28,19 @@ main {
   padding: 0 3.125rem;
 }
 
+article {
+  display: inherit;
+}
+
+li {
+  list-style: none;
+}
+
 .fa-solid {
   color: var(--main-color);
 }
 
-/****** Typography ***********/
+/****** TYPOGRAPHY ***********/
 
 a {
   text-decoration: none;
@@ -53,11 +61,7 @@ h3 {
   width: 100%;
 }
 
-h4 {
-  margin-bottom: 0.31rem;
-}
-
-/****** Basic Classes & Modifiers ***********/
+/****** BASIC CLASSES & MODIFIERS ***********/
 
 .basic--button {
   border: 2px solid #d9d9d9;
@@ -148,7 +152,7 @@ h4 {
   flex: 1;
 }
 
-/****** Header ***********/
+/****** HEADER ***********/
 
 header {
   margin-bottom: 1.875rem;
@@ -161,15 +165,15 @@ header {
   margin: 1.875rem 0;
 }
 
-nav {
+.header__nav {
   align-self: flex-start;
 }
 
-nav > ul {
+.header__nav > ul {
   gap: 4.25rem;
 }
 
-nav > ul > li {
+.header__nav > ul > li {
   list-style: none;
   width: 50%;
   text-align: center;
@@ -178,14 +182,16 @@ nav > ul > li {
   cursor: pointer;
 }
 
-nav > ul > li:hover,
-nav > ul > li:active,
-nav > ul > li:focus {
+.header__nav > ul > li:hover,
+.header__nav > ul > li:active,
+.header__nav > ul > li:focus {
   color: var(--main-color);
   border-top: 2px var(--main-color) solid;
 }
 
-/****** Booking Search ***********/
+/****** MAIN ***********/
+
+/****** BOOKING SEARCH ***********/
 
 .booking-search {
   margin-bottom: 2.18rem;
@@ -215,17 +221,15 @@ nav > ul > li:focus {
   cursor: pointer;
 }
 
-.search--button:hover, 
+.search--button:hover,
 .search--button:focus {
-    color: var(--main-color);
-    background-color: white;
+  color: var(--main-color);
+  background-color: white;
 }
 
 .search--button:active {
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.61);
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.61);
 }
-
-
 
 .booking-search__search-bar > form > input {
   flex-grow: 1;
@@ -298,17 +302,19 @@ nav > ul > li:focus {
   border-radius: 50%;
 }
 
-/****** Booking housing ***********/
+/****** BOOKING HOUSING ***********/
 
 .booking-housing {
   gap: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .booking-housing__popular,
 .booking-housing__selection {
   background-color: var(--main-bg-color);
   border-radius: 1rem;
-  padding: 2.2rem 1.25rem;
+  padding: 2rem 1.25rem;
+  min-height: 610px;
 }
 
 .booking-housing__selection__list,
@@ -324,6 +330,7 @@ nav > ul > li:focus {
 
 .booking-housing__popular {
   flex: 1.2;
+  height: 610px;
 }
 
 .booking-housing__popular__title {
@@ -343,6 +350,8 @@ nav > ul > li:focus {
   border-radius: 1.25rem;
   padding: 0.3rem;
   height: 146px;
+  transition: 1s;
+  width: 100%;
 }
 
 .booking-card__image-container {
@@ -351,9 +360,14 @@ nav > ul > li:focus {
   border-radius: 20px 0px 0px 20px;
 }
 
+.booking-card img {
+  transition: 1s;
+}
+
 .booking-card__info {
   padding: 0.625rem 0.9rem;
   flex: 2;
+  gap: 0.5rem;
 }
 
 .booking-card__info > p {
@@ -367,4 +381,68 @@ nav > ul > li:focus {
 .fa-star {
   color: var(--main-bg-color);
   font-size: 0.75rem;
+}
+
+.booking-card > a:hover img {
+  transform: scale(1.1);
+}
+
+/****** BOOKING ACTIVITIES ***********/
+
+.activities {
+  padding: 1.875rem;
+}
+
+.activities__list {
+  gap: 2rem;
+  margin: 1.875rem 0;
+}
+
+.activity-card {
+  flex: 1;
+}
+
+.activity-card > a {
+  height: 440px;
+  border-radius: 1.25rem;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.295);
+  overflow: hidden;
+}
+
+.activity-card__image-container {
+  flex: 3;
+  overflow: hidden;
+}
+
+.activity-card img {
+  transition: 1s;
+}
+
+.activity-card > a > h4 {
+  padding: 1.25rem;
+}
+
+.activity-card > a:hover img {
+  transform: scale(1.1);
+}
+
+/****** FOOTER ***********/
+
+footer {
+  background-color: var(--main-bg-color);
+}
+
+.footer__section {
+  padding: 1.25rem;
+  text-align: start;
+  flex: 1;
+}
+
+.footer__section h5,
+.footer__section li {
+  margin-bottom: 1rem;
+}
+
+.footer__section h5 {
+  font-size: 1.125rem;
 }
