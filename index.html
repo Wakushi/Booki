@@ -21,25 +21,245 @@
   </head>
 
   <body>
-    <header class="flex--column flex--center">
-      <div class="header__logo">
-        <img src="./images/logo/Booki.png" alt="Booki logo" />
-      </div>
-      <nav>
-        <ul class="flex--around">
-          <li>Hébergements</li>
-          <li>Activités</li>
-        </ul>
-      </nav>
-    </header>
-    <section class="booking-search">
-      <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-      <p>En plein centre-ville ou en pleine nature</p>
-      <div class="booking-search__search-bar flex--between">
-        <i class="fa-solid fa-location-dot"></i>
-        <input type="text" placeholder="Marseille, France" />
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-    </section>
+    <div class="main-container">
+      <!-- HEADER -->
+      <header class="flex--between">
+        <div class="header__logo">
+          <img src="./images/logo/Booki.png" alt="Booki logo" />
+        </div>
+        <nav>
+          <ul class="flex">
+            <li><a href="#housingSelection">Hébergements</a></li>
+            <li><a href="#activities">Activités</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- MAIN -->
+      <main>
+        <!-- SEARCH SECTION -->
+        <section class="booking-search">
+          <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+          <p>En plein centre-ville ou en pleine nature</p>
+          <div class="booking-search__search-bar flex">
+            <i class="fa-solid fa-location-dot"></i>
+            <form class="flex">
+              <input type="text" placeholder="Marseille, France" />
+              <button>Rechercher</button>
+            </form>
+            <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+          </div>
+          <!-- SEARCH FILTERS -->
+          <h2>Filtres</h2>
+          <div class="booking-search__filters flex--between">
+            <button class="basic--button flex">
+              <i class="fa-solid fa-money-bill-wave"></i>Économique
+            </button>
+            <button class="basic--button flex">
+              <i class="fa-solid fa-person"></i>Familial
+            </button>
+            <button class="basic--button flex">
+              <i class="fa-solid fa-heart"></i>Romantique
+            </button>
+            <button class="basic--button flex">
+              <i class="fa-solid fa-fire"></i>Nos pépites
+            </button>
+          </div>
+          <div class="booking-search__info flex--center">
+            <i class="fa-solid fa-info"></i>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+          </div>
+        </section>
+        <!-- BOOKING - HOUSING -->
+        <section class="booking-housing">
+          <div class="booking-housing__popular flex">
+            <div class="booking-housing__popular__title flex--between">
+              <h3>Les plus populaires</h3>
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <!-- HOUSINGS -->
+            <article class="booking-card">
+              <a href="#" class="flex">
+                <div class="booking-card__image-container">
+                  <img
+                    src="./images/hebergements/emile-guillemot.jpg"
+                    alt="Photo du logement"
+                  />
+                </div>
+                <div class="booking-card__info flex--column">
+                  <h4>Hôtel Le soleil du matin</h4>
+                  <p>Nuit à partir de 128<span class="euro">€</span></p>
+                  <div class="booking-card__info__ratings flex">
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="booking-card">
+              <a href="#" class="flex">
+                <div class="booking-card__image-container">
+                  <img
+                    src="./images/hebergements/aw-creative.jpg"
+                    alt="Photo du logement"
+                  />
+                </div>
+                <div class="booking-card__info flex--column">
+                  <h4>Chambres d’hôtes Au cœur de l’eau</h4>
+                  <p>Nuit à partir de 71<span class="euro">€</span></p>
+                  <div class="booking-card__info__ratings flex">
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="booking-card">
+              <a href="#" class="flex">
+                <div class="booking-card__image-container">
+                  <img
+                    src="./images/hebergements/febrian-zakaria2.jpg"
+                    alt="Photo du logement"
+                  />
+                </div>
+                <div class="booking-card__info flex--column">
+                  <h4>Hôtel Bleu et Blanc</h4>
+                  <p>Nuit à partir de 68<span class="euro">€</span></p>
+                  <div class="booking-card__info__ratings flex">
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star star--full"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="booking-housing__selection flex">
+            <h3 id="housingSelection">Hébergements à Marseille</h3>
+            <article class="booking-card wide--image flex">
+              <div class="booking-card__image-container">
+                <img
+                  src="./images/hebergements/fred-kleber.jpg"
+                  alt="Photo du logement"
+                />
+              </div>
+              <div class="booking-card__info flex--column">
+                <h4>Hôtel Le soleil du matin</h4>
+                <p>Nuit à partir de 128<span class="euro">€</span></p>
+                <div class="booking-card__info__ratings flex">
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+            <article class="booking-card wide--image flex">
+              <div class="booking-card__image-container">
+                <img
+                  src="./images/hebergements/marcus-loke.jpg"
+                  alt="Photo du logement"
+                />
+              </div>
+              <div class="booking-card__info flex--column">
+                <h4>Hôtel Le soleil du matin</h4>
+                <p>Nuit à partir de 128<span class="euro">€</span></p>
+                <div class="booking-card__info__ratings flex">
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+            <article class="booking-card wide--image flex">
+              <div class="booking-card__image-container">
+                <img
+                  src="./images/hebergements/reisetopia.jpg"
+                  alt="Photo du logement"
+                />
+              </div>
+              <div class="booking-card__info flex--column">
+                <h4>Hôtel Le soleil du matin</h4>
+                <p>Nuit à partir de 128<span class="euro">€</span></p>
+                <div class="booking-card__info__ratings flex">
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+            <article class="booking-card wide--image flex">
+              <div class="booking-card__image-container">
+                <img
+                  src="./images/hebergements/annie-spratt.jpg"
+                  alt="Photo du logement"
+                />
+              </div>
+              <div class="booking-card__info flex--column">
+                <h4>Hôtel Le soleil du matin</h4>
+                <p>Nuit à partir de 128<span class="euro">€</span></p>
+                <div class="booking-card__info__ratings flex">
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+            <article class="booking-card wide--image flex">
+              <div class="booking-card__image-container">
+                <img
+                  src="./images/hebergements/nicate-lee.jpg"
+                  alt="Photo du logement"
+                />
+              </div>
+              <div class="booking-card__info flex--column">
+                <h4>Hôtel Le soleil du matin</h4>
+                <p>Nuit à partir de 128<span class="euro">€</span></p>
+                <div class="booking-card__info__ratings flex">
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+            <article class="booking-card wide--image flex">
+              <div class="booking-card__image-container">
+                <img
+                  src="./images/hebergements/febrian-zakaria.jpg"
+                  alt="Photo du logement"
+                />
+              </div>
+              <div class="booking-card__info flex--column">
+                <h4>Hôtel Le soleil du matin</h4>
+                <p>Nuit à partir de 128<span class="euro">€</span></p>
+                <div class="booking-card__info__ratings flex">
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star star--full"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
