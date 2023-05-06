@@ -529,6 +529,10 @@ footer {
 
   /***** BOOKING ********/
 
+  .booking-card {
+    max-width: 100%;
+  }
+
   .booking-housing {
     flex-direction: column-reverse;
     gap: 0;
