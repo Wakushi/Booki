@@ -139,7 +139,8 @@ h3 {
 }
 
 .fa-magnifying-glass {
-  display: none;
+  color: white;
+  font-size: 1rem;
 }
 
 .euro {
@@ -237,7 +238,8 @@ header {
   background-color: white;
 }
 
-.search--button:active {
+.search--button:active,
+.booking-search__search-bar .small--search--button:active {
   box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.61);
 }
 
@@ -260,7 +262,7 @@ header {
 }
 
 .booking-search__search-bar .fa-location-dot,
-.booking-search__search-bar .fa-magnifying-glass {
+.booking-search__search-bar .small--search--button {
   padding: 1rem;
 }
 
@@ -270,17 +272,24 @@ header {
   border-radius: 1rem 0 0 1rem;
 }
 
-.booking-search__search-bar .fa-magnifying-glass {
-  color: white;
+.booking-search__search-bar .small--search--button {
+  display: none;
+  width: 50px;
+  height: 50px;
   background-color: var(--main-color);
   border-radius: 1rem;
+  border: transparent;
   cursor: pointer;
 }
 
-.booking-search__search-bar .fa-magnifying-glass:hover,
-.booking-search__search-bar .fa-magnifying-glass:focus {
-  color: var(--main-color);
+.booking-search__search-bar .small--search--button:hover,
+.booking-search__search-bar .small--search--button:focus {
   background-color: var(--main-bg-color);
+}
+
+.booking-search__search-bar .small--search--button:hover .fa-magnifying-glass,
+.booking-search__search-bar .small--search--button:focus .fa-magnifying-glass {
+  color: var(--main-color);
 }
 
 /* SEARCH FILTERS */
@@ -522,9 +531,8 @@ footer {
     display: none;
   }
 
-  .fa-magnifying-glass {
+  .booking-search__search-bar .small--search--button {
     display: block;
-    justify-self: flex-end;
   }
 
   /***** BOOKING ********/
