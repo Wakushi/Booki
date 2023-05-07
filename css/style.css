@@ -260,7 +260,8 @@ header {
   font-weight: 700;
 }
 
-.booking-search__search-bar input::placeholder {
+.booking-search__search-bar input::placeholder,
+.booking-search__search-bar input::-moz-placeholder {
   color: black;
   font-weight: 700;
 }
